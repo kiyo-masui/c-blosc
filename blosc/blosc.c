@@ -65,7 +65,7 @@
 /* Have problems using posix barriers when symbol value is 200112L */
 /* This requires more investigation, but will work for the moment */
 #if defined(_POSIX_BARRIERS) && ( (_POSIX_BARRIERS - 20012L) >= 0 && _POSIX_BARRIERS != 200112L)
-#define _POSIX_BARRIERS_MINE
+//#define _POSIX_BARRIERS_MINE
 #endif
 /* Synchronization variables */
 

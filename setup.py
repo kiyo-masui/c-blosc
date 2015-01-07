@@ -13,13 +13,13 @@ import shutil
 import glob
 
 
-COMPILE_FLAGS = ['-Ofast', '-march=native', '-std=c99']
+COMPILE_FLAGS = ['-Ofast', '-march=native', '-std=c99',]
 # Cython breaks strict aliasing rules.
 COMPILE_FLAGS += ["-fno-strict-aliasing"]
 #COMPILE_FLAGS = ['-Ofast', '-march=core2', '-std=c99', '-fopenmp']
 
 MACROS = [
-        ("HAVE_LZ4", "")
+        ("HAVE_LZ4", None)
           ]
 
 
@@ -27,7 +27,7 @@ H5PLUGINS_DEFAULT = '/usr/local/hdf5/lib/plugin'
 
 # Copied from h5py.
 # TODO, figure out what the canonacal way to do this should be.
-INCLUDE_DIRS = []
+INCLUDE_DIRS = ['/usr/include/']
 LIBRARY_DIRS = []
 if sys.platform == 'darwin':
     # putting here both macports and homebrew paths will generate
